@@ -15,9 +15,7 @@ window.onscroll = () => {
   if ($("navbar").offsetTop >= 100) {
     navClass.remove("w-3/4");
     navClass.add("w-full");
-    console.log("more");
   } else {
-    console.log("less");
     navClass.remove("w-full");
     navClass.add("w-3/4");
   }
