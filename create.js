@@ -2,7 +2,6 @@ const create = ({ brand, image, phone_name: name, slug: id }) => {
   /* --------------------------------------------------------------------- */
   /*               note: getting slug with different name id               */
   /* --------------------------------------------------------------------- */
-  console.log(brand, image, name, id);
   const div = document.createElement("div");
   div.classList.add("card", "mt-10", "shadow", "hover:shadow-lg");
   div.innerHTML = `
@@ -26,7 +25,7 @@ const create = ({ brand, image, phone_name: name, slug: id }) => {
     `;
   div.querySelector("button").addEventListener("click", (e) => {
     e.stopPropagation();
-    toggleModal();
+    toggleModal(id);
   });
   $("showcase").appendChild(div);
 };
