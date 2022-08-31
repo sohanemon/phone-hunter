@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link
+      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4a314d7cd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        ::-webkit-scrollbar {
+          @apply w-1;
+        }
+        ::-webkit-scrollbar-thumb {
+          @apply bg-pink-500;
+        }
+      }
+    </style>
+    <title>Phonemon</title>
+  </head>
+  <body>
+    <nav class="navbar w-3/4 mx-auto my-10 bg-white">
+      <div class="container-lg px-0">
+        <div class="flex w-full items-center">
+          <div
+            class="nav-brand mr-auto ml-0 cursor-pointer"
+            onclick="dataFetch()"
+          >
+            Phonemon
+          </div>
+        </div>
+        <div
+          class="input-group input-group-dynamic min-w-max flex-nowrap gap-2 mx-auto"
+        >
+          <label class="form-label">Search</label>
+          <input id="search" type="text" class="form-control" /><button
+            class="button button-icon button-pink w-20 h-9 bg-pink-600"
+            data-ripple-light="true"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" navbar-menu="">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="https://github.com/sohanemon">
+                <i class="fab fa-github mr-2 text-base opacity-60"></i>
+                <span>Github</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- --------------------------- navbar end --------------------------- -->
+
+    <h1 id="heading" class="text-2xl font-medium text-center my-10"></h1>
+    <div class="absolute w-screen h-screen" id="modal"></div>
+    <!-- ---------------------------- showcase ---------------------------- -->
+    <main id="showcase" class="grid grid-cols-3 gap-7"></main>
+    <!-- -------------------------- showcase end -------------------------- -->
+
+    <!-- ---------------------------- scripts ----------------------------- -->
+    <script src="./functions.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/input.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./dataFetch.js"></script>
+    <script src="./search.js"></script>
+    <script src="./create.js"></script>
+    <script src="./app.js"></script>
+    <!-- --------------------------- script end --------------------------- -->
+  </body>
+</html>
