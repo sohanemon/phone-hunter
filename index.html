@@ -33,31 +33,33 @@
     <title>Phonemon</title>
   </head>
   <body>
-    <nav class="navbar w-3/4 mx-auto my-10 bg-white">
+    <nav
+      id="navbar"
+      class="navbar sticky top-0 z-50 w-3/4 mx-auto my-10 bg-white"
+    >
       <div class="container-lg px-0">
-        <div class="flex w-full items-center">
-          <div
-            class="font-bold tracking-wide mr-auto ml-0 text-pink-600 cursor-pointer"
-            onclick="dataFetch()"
-          >
+        <div class="w-full text-center lg:text-left">
+          <div class="font-bold tracking-wide text-pink-600 mb-4 md:mb-0">
             Phonemon
           </div>
         </div>
-        <div
-          class="input-group input-group-dynamic min-w-max flex-nowrap gap-2 mx-auto"
-        >
-          <label class="form-label">Search</label>
-          <input
-            style="width: 10rem; border: 0"
-            id="search"
-            type="text"
-            class="form-control hover:ring-0 ring-0 ring-transparent focus:ring-0 active:ring-0"
-          /><button
-            class="button button-icon button-pink w-20 h-9 hove bg-pink-600"
-            data-ripple-light="true"
+        <div class="w-full grid place-content-center">
+          <div
+            class="input-group input-group-dynamic min-w-max flex-nowrap gap-2 mx-auto"
           >
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+            <label class="form-label">Search</label>
+            <input
+              style="width: 10rem; border: 0"
+              id="search"
+              type="text"
+              class="form-control hover:ring-0 ring-0 ring-transparent focus:ring-0 active:ring-0"
+            /><button
+              class="button button-icon button-pink w-20 h-9 hove bg-pink-600"
+              data-ripple-light="true"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
 
         <div class="collapse navbar-collapse" navbar-menu="">
@@ -90,7 +92,10 @@
     ></h1>
     <div class="absolute h-screen" id="modal"></div>
     <!-- ---------------------------- showcase ---------------------------- -->
-    <main id="showcase" class="w-3/4 mx-auto grid grid-cols-3 gap-7"></main>
+    <main
+      id="showcase"
+      class="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-7 lg:grid-cols-3"
+    ></main>
     <!-- -------------------------- showcase end -------------------------- -->
 
     <!-- ---------------------------- scripts ----------------------------- -->
