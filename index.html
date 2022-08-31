@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- stylesheet -->
+
     <link
-      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
     <script
       src="https://kit.fontawesome.com/4a314d7cd5.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+      rel="stylesheet"
+    />
     <style type="text/tailwindcss">
       @layer components {
         ::-webkit-scrollbar {
@@ -31,7 +37,7 @@
       <div class="container-lg px-0">
         <div class="flex w-full items-center">
           <div
-            class="nav-brand mr-auto ml-0 cursor-pointer"
+            class="font-bold tracking-wide mr-auto ml-0 text-pink-600 cursor-pointer"
             onclick="dataFetch()"
           >
             Phonemon
@@ -41,8 +47,13 @@
           class="input-group input-group-dynamic min-w-max flex-nowrap gap-2 mx-auto"
         >
           <label class="form-label">Search</label>
-          <input id="search" type="text" class="form-control" /><button
-            class="button button-icon button-pink w-20 h-9 bg-pink-600"
+          <input
+            style="width: 10rem; border: 0"
+            id="search"
+            type="text"
+            class="form-control hover:ring-0 ring-0 ring-transparent focus:ring-0 active:ring-0"
+          /><button
+            class="button button-icon button-pink w-20 h-9 hove bg-pink-600"
             data-ripple-light="true"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -52,9 +63,18 @@
         <div class="collapse navbar-collapse" navbar-menu="">
           <ul class="navbar-nav">
             <li>
-              <a class="nav-link" href="https://github.com/sohanemon">
-                <i class="fab fa-github mr-2 text-base opacity-60"></i>
-                <span>Github</span>
+              <a
+                class="nav-link group"
+                target="_blank"
+                href="https://github.com/sohanemon"
+              >
+                <i
+                  class="fab fa-github mr-2 text-pink-600 hover:text-pink-800 text-base opacity-60"
+                ></i>
+                <span
+                  class="group-hover:underline decoration-pink-400 decoration-2 text-pink-600"
+                  >Github</span
+                >
               </a>
             </li>
           </ul>
@@ -63,19 +83,27 @@
     </nav>
     <!-- --------------------------- navbar end --------------------------- -->
 
-    <h1 id="heading" class="text-2xl font-medium text-center my-10"></h1>
-    <div class="absolute w-screen h-screen" id="modal"></div>
+    <!-- ------------------------------ test ------------------------------ -->
+    <h1
+      id="heading"
+      class="text-2xl text-pink-500 font-medium text-center my-10"
+    ></h1>
+    <div class="absolute h-screen" id="modal"></div>
     <!-- ---------------------------- showcase ---------------------------- -->
     <main id="showcase" class="w-3/4 mx-auto grid grid-cols-3 gap-7"></main>
     <!-- -------------------------- showcase end -------------------------- -->
 
     <!-- ---------------------------- scripts ----------------------------- -->
     <script src="./functions.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/input.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"></script>
     <script src="./modal.js"></script>
     <script src="./dataFetch.js"></script>
     <script src="./search.js"></script>
     <script src="./create.js"></script>
+    <script src="./footer.js"></script>
     <script src="./app.js"></script>
     <!-- --------------------------- script end --------------------------- -->
   </body>

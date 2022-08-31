@@ -3,7 +3,13 @@ const dataFetch = (message, key = "iphone") => {
   fetch(` https://openapi.programming-hero.com/api/phones?search=${key}`)
     .then((res) => res.json())
     .then((data) => {
-      data.data.map((item) => create(item));
-      $("heading").innerText = message;
+      if (!data?.data?.length) {
+        console.log("if");
+        $("heading").innerText = "Item not found.";
+      } else {
+        data.data.map((item) => create(item));
+        console.log("el");
+        $("heading").innerText = message;
+      }
     });
 };
