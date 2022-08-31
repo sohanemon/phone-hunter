@@ -15,8 +15,8 @@ const create = ({ brand, image, phone_name: name, slug: id }) => {
     <a href="#">
       <h4 class="font-medium tracking-wide">${name}</h4>
     </a>
-    <p class="opcacity-60 mb-3 tracking-wide">
-     Brand: <span class='font-medium'>${brand}</span>.
+    <p class="opcacity-60 mb-3 font-medium tracking-wide">
+${brand}
     </p>
     <button class="button button-pink" data-ripple-light="true">
       Details

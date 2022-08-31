@@ -28,7 +28,7 @@ const toggleModal = async (id) => {
   div.innerHTML = `
 <div class= "card card-plain fixed z-50 w-1/2 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
   <div class="flex relative shadow-2xl rounded-lg overflow-hidden -space-x-2">
-  <i class="fa-solid fa-xmark absolute h-10 w-10 grid place-content-center text-xl m-5 right-0 cursor-pointer bg-pink-100 text-pink-500 hover:bg-pink-200 rounded-full p-2"></i>
+  <i class="fa-solid fa-xmark absolute h-10 w-10 grid place-content-center text-xl m-5 right-0 cursor-pointer bg-pink-100 text-pink-500 hover:bg-pink-200 rounded-full p-2 hover:scale-105"></i>
     <div class="w-1/3 bg-white">
       <img
         class="w-full p-10  object-cover"
